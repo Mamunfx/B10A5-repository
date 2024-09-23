@@ -1,4 +1,4 @@
-function donationCard(donation_ammount,card_bln) {
+function donationCard(donation_ammount,card_bln,donationName) {
 
     // declraing variables :
     const donationAmmount = parseFloat(document.getElementById(donation_ammount).value);
@@ -39,7 +39,7 @@ function donationCard(donation_ammount,card_bln) {
     // Making history section :
     const div = document.createElement('div')
     const p1 = document.createElement('p');
-    p1.innerText = `${donationAmmount} is added to total donation`
+    p1.innerText = `${donationAmmount} ${donationName}`
     const p2 = document.createElement('p');
     const d = new Date();
     p2.innerText = `${d}`;

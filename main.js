@@ -9,13 +9,16 @@ const donation1 = " for Flood at Noakhali, Bangladesh "
 const donation2 = " for Flood Relief in Feni,Bangladesh"
 const donation3 = " for Injured in the Quota Movement"
 
-
 hisotryBtn.addEventListener('click',function(){
-    activeStatus(history,donation)
+    activeStatus(history,donation);
+    hisotryBtn.classList.add("bg-lime-400");
+    donationBtn.classList.remove("bg-lime-400");
 })
 
 donationBtn.addEventListener('click',function(){
-    activeStatus(donation , history)
+    activeStatus(donation , history);
+    donationBtn.classList.add("bg-lime-400");
+    hisotryBtn.classList.remove("bg-lime-400");
 })
 
 

@@ -3,7 +3,6 @@ function activeStatus(h , d) {
         h.classList.remove('hidden');
 }
 
-
 function donationCard(donation_ammount,card_bln,donationName) {
 
     // declraing variables :

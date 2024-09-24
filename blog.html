@@ -7,44 +7,34 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      }
-    }
-  </script>
+  
 </head>
 <body>
 
-  <nav class="w-11/12 m-auto">
-    <div class="navbar bg-base-100">
+  <nav class="bg-red-50 lg:mb-16 ">
+    <div class="navbar w-11/12 m-auto">
       <div class="navbar-start ">
-        <a href="index.html" class="btn w-20 bg-lime-400">Home</a>
+        <a href="index.html" class="btn w-20 bg-lime-400 border-none">Home</a>
       </div>
   
-      <div class="navbar-center  lg:flex ">
+      <div class="navbar-center  lg:flex lg:space-x-2 ">
         <img src="./assets/logo.png" alt="logo">
-        <h1 class="font-bold text-3xl">Donate Bangladesh</h1>
+        <h1 class="font-bold text-3xl hidden lg:block ">Donate Bangladesh</h1>
       </div>
   
       <div class="navbar-end">
         <img src="./assets/coin.png" alt="coin">
-        <p>5500 BDT</p>
+        <p id="total_balance">5500</p> <span>BDT</span>
       </div>
     </div>
   </nav>
 
-  <div class="flex  align-middle text-center space-x-4">
-    <h1 class="font-bold text-4xl">Frequently asked question</h1>
-    <img class="w-12" src="./assets/help.png" alt="">
+  <div class="flex  align-middle text-center space-x-4 w-11/12 m-auto mb-7 mt-8">
+    <h1 class="font-bold lg:text-4xl text-2xl">Frequently asked question</h1>
+    <img class="lg:w-12 w-10" src="./assets/help.png" alt="icon">
   </div>
 
-  <div>
+  <div class="w-11/12 m-auto space-y-4">
 
     <div class="collapse collapse-arrow bg-base-200">
       <input type="radio" name="my-accordion-2" checked="checked" />

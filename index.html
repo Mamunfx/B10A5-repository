@@ -7,31 +7,20 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      }
-    }
-  </script>
 </head>
 <body class="relative" >
 
-  <div class="sticky top-0 z-10 bg-slate-600">
+  <div id="upperSection" class="sticky top-0 z-10  space-y-8 bg-red-50 bg-opacity-40">
 
-    <nav class="w-11/12 m-auto">
-      <div class="navbar bg-base-100">
+    <nav class="bg-red-50 lg:mb-16">
+      <div class="navbar w-11/12 m-auto">
         <div class="navbar-start ">
           <a href="blog.html" class="btn w-20 bg-lime-400">Blog</a>
         </div>
     
-        <div class="navbar-center  lg:flex ">
+        <div class="navbar-center  lg:flex lg:space-x-2 ">
           <img src="./assets/logo.png" alt="logo">
-          <h1 class="font-bold text-3xl">Donate Bangladesh</h1>
+          <h1 class="font-bold text-3xl hidden lg:block ">Donate Bangladesh</h1>
         </div>
     
         <div class="navbar-end">
@@ -41,26 +30,28 @@
       </div>
     </nav>
   
-      <div class="flex justify-center space-x-2">
+      <div class="flex justify-center space-x-4  ">
       <button id="donation_btn" class="btn bg-lime-400 border-none">Donation</button>
       <button id="hisoty_btn" class="btn border-none ">History</button>
       </div>
+
+      <hr class="bg-slate-600">
   </div>
 
 
   <main class="mt-10 flex flex-col justify-center w-11/12 m-auto ">
 
-    <div id="donation" class="w-10/12 m-auto">
+    <div id="donation" class="w-11/12 lg:w-10/12 m-auto space-y-8">
 
 
-      <div class="card lg:card-side bg-base-100 shadow-xl flex">
+      <div class="card lg:card-side bg-base-100 shadow-xl flex p-6">
         <div class="flex-1">
           <img src="./assets/noakhali.png" alt="noakhali" />
         </div>
         <div class="card-body flex-1">
-          <div class="flex w-20 bg-slate-500 justify-center align-middle">
-            <span class="w-4  flex align-middle"><img src="./assets/coin.png" alt="coin"></span>
-            <span id="card_bln">12</span>
+          <div class="flex w-1/2 lg:w-1/5 bg-gray-100 rounded-md p-1 justify-center align-middle  space-x-1">
+            <span class=" flex align-middle"><img src="./assets/coin.png" alt="coin"></span>
+            <span id="card_bln" >12</span>
             <span>BDT</span>
           </div>
           <h1 class="card-title" id="donationName1">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -73,7 +64,7 @@
           <div>
             <button class="btn bg-lime-400 w-full" id="amount_btn" >Donate Now</button>
             <dialog id="my_modal_1" class="modal">
-                <div class="w-[35%]">
+                <div class="lg:w-[35%] w-[75%]">
                     <div class="modal-box  space-y-2">
                         <h1 class="text-3xl font-bold text-center ">Congrates!</h1>
                         <img src="/assets/coin.png" alt="coin" class="w-10  m-auto ">
@@ -93,14 +84,14 @@
       </div>
 
 
-      <div class="card lg:card-side bg-base-100 shadow-xl flex">
+      <div class="card lg:card-side bg-base-100 shadow-xl flex p-6">
         <div class="flex-1">
           <img
             src="./assets/feni.png"
             alt="feni" />
         </div>
         <div class="card-body flex-1">
-          <div class="flex w-20 bg-slate-500 justify-center align-middle">
+          <div class="flex w-1/2 lg:w-1/5 bg-gray-100 rounded-md p-1 justify-center align-middle  space-x-1">
             <span class="w-4  flex align-middle"><img src="./assets/coin.png" alt="coin "></span>
             <span id="card_bln2">0</span>
             <span>BDT</span>
@@ -114,14 +105,14 @@
         </div>
       </div>
 
-      <div class="card lg:card-side bg-base-100 shadow-xl flex">
+      <div class="card lg:card-side bg-base-100 shadow-xl flex p-6">
         <div class="flex-1">
           <img
             src="/assets/quota-protest.png"
             alt="noakhali" />
         </div>
         <div class="card-body flex-1">
-          <div class="flex w-20 bg-slate-500 justify-center align-middle">
+          <div class="flex w-1/2 lg:w-1/5 bg-gray-100 rounded-md p-1 justify-center align-middle  space-x-1">
             <span class="w-4  flex align-middle"><img src="./assets/coin.png" alt="coin "></span>
             <span id="card_bln3">0</span>
             <span>BDT</span>
@@ -139,7 +130,7 @@
 
 
     <div id="history" class="hidden">
-      <div class="bg-cyan-200 p-6 rounded-lg space-y-8" id="tansiction">
+      <div id="tansiction">
       </div> 
     </div>
 

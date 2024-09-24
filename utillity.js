@@ -1,3 +1,11 @@
+function activeStatus(h , d) {
+        h.classList.add('bg-lime-400');
+        d.classList.remove('bg-lime-400');
+        d.classList.add('hidden');
+        h.classList.remove('hidden');
+}
+
+
 function donationCard(donation_ammount,card_bln,donationName) {
 
     // declraing variables :
@@ -39,7 +47,7 @@ function donationCard(donation_ammount,card_bln,donationName) {
     // Making history section :
     const div = document.createElement('div')
     const p1 = document.createElement('p');
-    p1.innerText = `${donationAmmount} ${donationName}`
+    p1.innerText = `${donationAmmount} BDT is donated  ${donationName}`
     const p2 = document.createElement('p');
     const d = new Date();
     p2.innerText = `${d}`;
@@ -47,5 +55,12 @@ function donationCard(donation_ammount,card_bln,donationName) {
     div.appendChild(p2);  
     transiction.appendChild(div);
     div.classList.add('bg-green-400', 'mt-8')
+
+    // Open modal :
+    my_modal_1.showModal();
 }
 
+
+function resetingInput(cardName) {
+    document.getElementById(cardName).value = '';
+}

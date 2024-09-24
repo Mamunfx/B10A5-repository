@@ -1,6 +1,4 @@
 function activeStatus(h , d) {
-        h.classList.add('bg-lime-400');
-        d.classList.remove('bg-lime-400');
         d.classList.add('hidden');
         h.classList.remove('hidden');
 }
@@ -47,14 +45,15 @@ function donationCard(donation_ammount,card_bln,donationName) {
     // Making history section :
     const div = document.createElement('div')
     const p1 = document.createElement('p');
-    p1.innerText = `${donationAmmount} BDT is donated  ${donationName}`
+    p1.innerText = `${donationAmmount} BDT is donated  ${donationName}.`
     const p2 = document.createElement('p');
     const d = new Date();
-    p2.innerText = `${d}`;
+    p2.innerText = `Date : ${d}`;
+    p1.classList.add('font-bold','text-xl')
     div.appendChild(p1);  
     div.appendChild(p2);  
     transiction.appendChild(div);
-    div.classList.add('bg-green-400', 'mt-8')
+    div.classList.add('rounded-lg', 'space-y-2','p-6' ,'border','border-gray-300','shadow-lg', 'mt-8')
 
     // Open modal :
     my_modal_1.showModal();
